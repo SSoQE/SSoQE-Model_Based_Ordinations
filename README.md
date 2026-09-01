@@ -2,60 +2,38 @@
 
 <img src="https://ssoqe.github.io/SSoQE_website/photos/SSOQE_logo3.png" width="150" alt="SSoQE logo">
 
-# SSoQE Lecture Template
+# Model-based Ordinations
 
-**Template for R and Quarto teaching repositories**
+**SSoQE 2026 · Saturday, 19 September · 09:00–10:30**
 
-[SSoQE website](https://ssoqe.github.io/SSoQE_website/) · [GitHub organization](https://github.com/SSoQE)
-
+[SSoQE website](https://ssoqe.github.io/SSoQE_website/) · [2026 programme](https://ssoqe.github.io/SSoQE_website/About/program.html)
 
 | **📅 Course information** | **🧰 Technical** | **📌 Status** |
 |:---:|:---:|:---:|
-| ![SSoQE 2026](https://img.shields.io/badge/SSoQE-2026-155560) | ![Type](https://img.shields.io/badge/Type-Template-155560) | ![Status](https://img.shields.io/badge/Status-Template-155560) |
-| ![Day](https://img.shields.io/badge/Day-Not_scheduled-C2A337) | ![Topic](https://img.shields.io/badge/Topic-Lecture_Infrastructure-155560) | ![Tools](https://img.shields.io/badge/Tools-R_%7C_Quarto-276DC3) |
+| ![SSoQE 2026](https://img.shields.io/badge/SSoQE-2026-155560) | ![Type](https://img.shields.io/badge/Type-Course_Module-155560) | ![Status](https://img.shields.io/badge/Status-New-C2A337) |
+| ![Day](https://img.shields.io/badge/Day-Saturday-C2A337) | ![Topic](https://img.shields.io/badge/Topic-Model--based_Ordination-155560) | ![Tools](https://img.shields.io/badge/Tools-Planned-276DC3) |
 
 </div>
 
-## 🧩 Purpose
+## 🌿 About the lesson
 
-This repository provides the current SSoQE structure for Quarto RevealJS presentations, HTML exercises, reproducible R environments, shared visual styling, and GitHub Pages publication output. It is infrastructure for lecturers, not a scheduled lesson.
+This is a new lesson in the SSoQE 2026 programme. It will introduce model-based approaches to ordination and clarify how their assumptions, uncertainty, and interpretation differ from the descriptive ordination methods introduced in the “Analysing Community Data” lesson.
 
-Use the template as a starting point only when creating or deliberately migrating a template-derived lecture. Older repositories may have valid PowerPoint, R Markdown, Quarto, or other author-owned workflows and must not be migrated merely for uniformity.
+## 🎯 Planned learning goals
 
-## 📚 Main sources
+The final teaching materials should enable participants to:
 
-- `Presentation/presentation.qmd` is the slide source.
-- `R/Exercises/01_example.qmd` is the example exercise source.
-- `Presentation/colors.json`, `Presentation/fonts.json`, and `Presentation/custom_theme.json` are the editable presentation-theme sources.
-- `R/generate_theme.R` generates the tracked presentation, exercise, and R theme files.
-- `R/render.R` renders the presentation and updates the publication copy.
-- `R/___Init_project___.R` is the explicit environment-setup entry point.
+- explain the motivation for a model-based ordination;
+- connect model assumptions with the ecological data-generating process;
+- fit and interpret an introductory model-based ordination;
+- assess uncertainty, diagnostics, and limitations;
+- compare model-based results with a suitable descriptive ordination.
 
-Generated HTML, Markdown, SCSS, font includes, and plotting themes must not be hand-edited.
+## 🚧 Repository status
 
-## 🧱 Creating a lesson
+This repository is the starting point for the new lesson. Teaching sources, data, exercises, dependencies, render commands, maintainers, and licensing information have not yet been defined and must be documented when the lecturer establishes them.
 
-1. Create a repository from this template or download a release.
-2. Rename the R project and replace template-specific titles, links, authorship, assets, and exercises.
-3. Keep reusable R functions under `R/` and analytical documents focused on orchestration.
-4. Record repository-specific commands, content ownership, or justified branding deviations in `.ai/repository.md`.
-5. Verify the complete render and publication-copy contract before distributing the lesson.
-
-## 🛠️ Setup and rendering
-
-Complete the explicit setup workflow before rendering. Dependency installation or restoration does not belong inside an ordinary render.
-
-Render the presentation from a clean R session with:
-
-```powershell
-Rscript R/render.R
-```
-
-Render exercises through their Quarto project under `R/Exercises/`. Review warnings, links, resources, accessibility, responsive layout, code overflow, and RevealJS fragment states.
-
-## 🎨 Branding
-
-Use the SSoQE logo without stretching, cropping, recolouring, or substitution. Shared colors and fonts come from the JSON sources and are regenerated through `R/generate_theme.R`; repository-specific visual exceptions must be documented.
+The current Quarto presentation and example exercise are inherited template placeholders. Do not copy the structure or dependencies of another lesson without first deciding the actual teaching workflow.
 
 ## 📄 Licence
 
