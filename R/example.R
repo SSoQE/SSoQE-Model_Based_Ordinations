@@ -1,4 +1,6 @@
+install.packages("gllvm")
 library(vegan)
+library(gllvm)
 
 #######################
 # Data ################
@@ -6,7 +8,7 @@ library(vegan)
 data(varespec)
 head(varespec)
 
-# Environmental data 
+# Environmental data
 data(varechem)
 head(varechem)
 #######################
@@ -34,7 +36,7 @@ mod_no_env <- gllvm(y = varespec, family = "poisson", num.lv = 2)
 gllvm::ordiplot(mod1, biplot = TRUE, spp.arrows = FALSE)
 abline(h = 0, v = 0, lty=2)
 
-# GLLVM with environment 
+# GLLVM with environment
 varechem_scaled<-scale(varechem)
 
 mod_with_env  <- gllvm(y = varespec, X=varechem_scaled, formula = ~ Ca + Al + Baresoil, family = "poisson", num.lv = 2)
