@@ -2,10 +2,10 @@
 # September 18th 2026
 # by Manuel
 # Code from github.com/orgs/SSoQE
-# Inspired by https://jenniniku.github.io/gllvm/index.html 
+# Inspired by https://jenniniku.github.io/gllvm/index.html
 # Aim:
-# Analysing complex community data using model based ordination 
-# 
+# Analysing complex community data using model based ordination
+#
 ###################################################
 
 # install.packages("gllvm")
@@ -14,7 +14,7 @@
 # install.packages("vegan")
 library("vegan")
 library("gllvm")
-library("mvabund") 
+library("mvabund")
 library("corrplot")
 
 ############################################
@@ -77,7 +77,7 @@ plot(cca)
 
 
 ############################################
-# Task B1: Now, fit the spider community with a model that only includes soil.dry and reflection as predictor variables (no latent variables). 
+# Task B1: Now, fit the spider community with a model that only includes soil.dry and reflection as predictor variables (no latent variables).
 # Task B2: Look at the model. Extract the coefficients for the predictors and visualise them with coefplot()
 # Task B3: How does this multivariate GLLVM with num.lv = 0 differ from fitting separate univariate GLMs for each species?
 # Task B4: Try to extract the residual correlation matrix using getResidualCor(). Why is a residual correlation structure not available for this model?
@@ -105,7 +105,7 @@ plot(cca)
 # Bonus question 1: How could I include quadratic relationships with the environmental data
 
 ############################################
-# Bonus 2: Constrained ordination
+# Bonus question 2: Constrained ordination
 
 # GLLVM can also be used for constrained ordination, where environmental variables inform the ordination axes.
 

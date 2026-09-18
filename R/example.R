@@ -1,6 +1,9 @@
 install.packages("gllvm")
+install.packages("vegan")
+
 library(vegan)
 library(gllvm)
+
 
 #######################
 # Data ################
@@ -17,14 +20,17 @@ head(varechem)
 # Correspondance Analysis #
 ###########################
 ca<-cca(varespec)
+quartz()
 plot(ca)
 vegan::scores(ca)$sites
 ###########################
 
 ######################
 # Canonical CA (CCA) #
+
 cca<-cca(varespec ~ Ca + Al + Baresoil ,data=varechem)
 cca
+quartz()
 plot(cca)
 ######################
 
@@ -33,7 +39,7 @@ plot(cca)
 mod_no_env <- gllvm(y = varespec, family = "poisson", num.lv = 2)
 
 # Ordiplot
-gllvm::ordiplot(mod1, biplot = TRUE, spp.arrows = FALSE)
+gllvm::ordiplot(mod_no_env, biplot = TRUE, spp.arrows = FALSE)
 abline(h = 0, v = 0, lty=2)
 
 # GLLVM with environment
@@ -48,6 +54,7 @@ coefplot(mod_with_env, which.Xcoef="Ca", xlim.list=list(c(-10,10)))
 # Compare residual associations
 cr_sp <- getResidualCor(mod_no_env)
 cr_env <- getResidualCor(mod_with_env)
+quartz()
 par(mfrow=c(1,2))
 corrplot::corrplot(cr_sp, diag = FALSE, type = "lower", method = "square", tl.srt = 25,main="no environment")
 corrplot::corrplot(cr_env, diag = FALSE, type = "lower", method = "square", tl.srt = 25,main="with environment")
